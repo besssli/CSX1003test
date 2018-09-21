@@ -6,4 +6,4 @@ from django.contrib.auth.models import User
 
 
 def index(request):
-	return HttpResponse('Today is a gooooood day, maybe.')
+	return render(request, 'msgboard.html')

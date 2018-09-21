@@ -1,0 +1,122 @@
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #F7EFED;
+}
+
+*{
+  /*border: 1px solid #000;*/
+  position: relative;
+  font-family: 'Noto Sans', sans-serif;
+}
+h1{
+  font-size: 36px;
+  font-family: 'Noto Sans', sans-serif;
+  color: #fff;
+  font-weight: 500;
+}
+.msgboard-container{
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  height: 500px;
+  background: #fff;
+  border-radius: 15px 15px 0px 0px;
+  overflow: hidden;
+}
+.board-header{
+  position: relative;
+  height: 60px;
+  background: #f07653;
+}
+.board-title{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#title{
+  margin: 0;
+}
+.msg-block{
+  width: 100%;
+}
+.msgcontent-container{
+  width: 250px;
+  margin: 12px;
+  display: inline-block;
+}
+.user-content-block{
+  padding: 10px;
+  text-align: left;
+}
+.otheruser-msgblock{
+  text-align: left;
+}
+.mine-msgblock{
+  text-align: right;
+}
+.otheruser-msgblock .user-content-block{
+  background: #f4efee;
+  border-radius: 10px 10px 10px 0px;
+  color: #545058;
+}
+.mine-msgblock .user-content-block{
+  background: #f2896a;
+  border-radius: 10px 10px 0px 10px;
+  color: #fff;
+}
+.content-time{
+  text-align: center;
+  font-size: 12px;
+}
+.user-name-block{
+  height: 20px;
+  width: 40px;
+  border-radius: 20px;
+  background: #e1e0e2;
+  margin-bottom: 8px;
+  display: inline-block;
+  text-align: center;
+}
+.user-content{
+  margin-bottom: 5px;
+}
+.mine-msgblock .user-name-block{ display: none; }
+
+.msgboard-sendbox{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-top: 2px solid #f6ae99;
+}
+#send-form{
+  width: 100%;
+  border-radius: 20px;
+}
+#msg-typing{ 
+  height: 25px;
+  width: 90%;
+  border-radius: 20px;
+  border: 1px solid #fce6df;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+#submit{
+  border: none;
+  height: 25px;
+  width: 25px;
+  font-size: 15px;
+  background: #f6ae99;
+  color: #fff;
+  border-radius: 20px;
+}
+input:focus{
+  outline: none;
+}
