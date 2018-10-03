@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+{% load staticfiles %}
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>攝影作品集</title>
+    <link href="{% static 'css/photography.css' %}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- navagation-pannel -->
+    <nav class="main-nav">
+      <div class="full-wrapper">
+        <div class="nav-logo-wrap">
+          <div class="mobile-nav"></div>
+          <div class="desktop-nav">
+            <div class="primary-nav">
+              <div class="menu-item">
+                <a href="/">HOME</a>
+              </div>
+              <div class="menu-item">
+                <a href="#">ABOUT</a>
+              </div>
+              <div class="menu-item">
+                <a href="/articles/">BLOG</a>
+              </div>
+              <div class="menu-item">
+                <a href="/album/">ALBUM</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class=title-section></section>
+    <section class="main-section">
+      <div class="container">
+        <div class="row">
+          {% for item in photo_count %}
+          <div class="col">
+            <img src="/static/images/{{item}}.jpg" alt="image">
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
