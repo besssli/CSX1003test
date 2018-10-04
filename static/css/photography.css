@@ -12,8 +12,21 @@ html, body {
 .container{
   width: 100%;
   padding: 20px;
-  border: 1px solid #000;
 }
-.col{
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.col {
   width: 300px;
+  height: 200px;
+  margin: 5px;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

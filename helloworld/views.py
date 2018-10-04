@@ -10,6 +10,6 @@ from os import listdir
 def index(request):
   return render(request, 'home.html')
 
-photo_count=[1,2,3,4]
+photo_count=[i+1 for i in range(4)]
 def photography(request):
   return render(request, 'photography.html',{'photo_count': photo_count})

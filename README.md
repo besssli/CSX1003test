@@ -15,5 +15,5 @@ https://besshelloworldtest.herokuapp.com/
 ## Week3
 
 1. 了解 Django Template 架構
-2. 在 project 中新增 App
-3. 學習 python
+2. 在 project 中新增 App，之後做成 BLOG
+3. 學習 python，用 list + for迴圈產生照片在 ALBUM 頁面
