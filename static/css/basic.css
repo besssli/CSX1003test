@@ -1,0 +1,23 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #673137;
+}
+*{
+  position: relative;
+  font-family: 'Lora','Noto Sans', sans-serif;
+}
+
+/* header */
+header{
+	width: 100%;
+}
+
+a,a:visited{
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #5a6372;
+}

@@ -5,32 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Bess</title>
+    <link href="{% static 'css/basic.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/photography.css' %}" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"/>
   </head>
   <body>
-    <nav class="main-nav">
-      <div class="full-wrapper">
-        <div class="nav-logo-wrap">
-          <div class="mobile-nav"></div>
-          <div class="desktop-nav">
-            <div class="primary-nav">
-              <div class="menu-item">
-                <a href="/">HOME</a>
-              </div>
-              <div class="menu-item">
-                <a href="#">ABOUT</a>
-              </div>
-              <div class="menu-item">
-                <a href="/articles/">BLOG</a>
-              </div>
-              <div class="menu-item">
-                <a href="/album/">ALBUM</a>
+    <header>
+      <div class="header-container">
+        <div class="header-wrapper">
+          <nav class="main-nav">                  
+            <div class="mobile-nav"></div>
+            <div class="desktop-nav">
+              <div class="primary-nav">
+                <div class="menu-item">
+                  <a href="/">HOME</a>
+                </div>
+                <div class="menu-item">
+                  <a href="#">WHO AM I</a>
+                </div>
+                <div class="menu-item">
+                  <a href="/album/">PROJECT I DID</a>
+                </div>
+                <div class="menu-item">
+                  <a href="/articles/">BLOG</a>
+                </div>
+                <div class="menu-item">
+                  <a href="/album/">ALBUM</a>
+                </div>
               </div>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
-    </nav>
-    <h1>Hi, It's Bess</h1>
+    </header>
+    <section class="homepageheader">
+      <div class="homepageheader-text">
+        <h3>This is</h3>
+        <h1 class="myname">Bess</h1>
+      </div>
+    </section>
   </body>
 </html>

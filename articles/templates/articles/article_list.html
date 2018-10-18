@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Articles</title>
+    <link href="{% static 'css/basic.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/article.css' %}" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -32,5 +33,14 @@
       </div>
     </nav>
     <h1>Article List</h1>
+    <div class="articles">
+      {% for article in articles %}
+      <div class="article">
+        <h2><a href="{% url 'articles:xdetail' slug=article.slug %}">{{article.title}}</a></h2>
+        <p>{{article.snippet}}</p>
+        <p>{{article.date}}</p>
+      </div>
+      {% endfor %}
+    </div>
   </body>
 </html

@@ -13,3 +13,6 @@ def index(request):
 photo_count=[i+1 for i in range(4)]
 def photography(request):
   return render(request, 'photography.html',{'photo_count': photo_count})
+
+# def messageboard(request):
+# 	return render_to_response('msgboard.html',locals())
