@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html lang="zh">
-  {% load staticfiles %}
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Articles</title>
-    <link href="{% static 'css/basic.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'css/article.css' %}" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <nav class="main-nav">
-      <div class="full-wrapper">
-        <div class="nav-logo-wrap">
-          <div class="mobile-nav"></div>
-          <div class="desktop-nav">
-            <div class="primary-nav">
-              <div class="menu-item">
-                <a href="/">HOME</a>
-              </div>
-              <div class="menu-item">
-                <a href="#">ABOUT</a>
-              </div>
-              <div class="menu-item">
-                <a href="/articles/">BLOG</a>
-              </div>
-              <div class="menu-item">
-                <a href="/album/">ALBUM</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+{% extends 'base_layout.html'%}
+
+{% block content %}
     <h1>Article List</h1>
     <div class="articles">
       {% for article in articles %}
@@ -42,5 +11,4 @@
       </div>
       {% endfor %}
     </div>
-  </body>
-</html
+{% endblock%}

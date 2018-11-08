@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Article(models.Model):
@@ -8,7 +9,8 @@ class Article(models.Model):
     slug = models.SlugField()
     content = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
-    clap_num = models.IntegerField(default='0') 
+    clap_num = models.IntegerField(default='0')
+    author = models.ForeignKey(User,default=None,on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title

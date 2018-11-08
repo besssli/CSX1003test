@@ -27,7 +27,42 @@ https://besshelloworldtest.herokuapp.com/
 
 **記得新增 colume 時要再 migrate!**
 
---------
-尚未實現：
-* 點文章標題導向文章內容
-* 像 medium 的拍手數量統計
+## Week6+7+8
+
+#### Learning
+#####一、 Django Template 運作方式
+![jango-template-flow](./note/django-template-flow.png)
+
+#####二、 資料傳送？Request？
+* `<form>` 定義data如何傳送
+* **action** 屬性：決定data要送到哪
+	* e.g. `<form action="/somewhere_else">` data傳送到
+* **method** 屬性：data傳送的方式，最常用`GET`、`POST`
+	* **GET**: 像是明信片，會將資料顯示在URL上被別人看到～
+	* **POST**: 像是有信封的信件，資料不會跟地址一起露在外面，「相對」安全
+
+#### Doing
+#####一、 在Blog中，像 medium 可以無限拍手的 Btn 
+* ==問題==：用 `<form>` 以 `POST` 傳送，在「重新整理」的時候拍手數也會增加
+
+**html**
+
+```
+<form action="" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value='claaaap'>
+</form>
+```
+
+
+**views.py**
+
+```
+def article_detail(request,slug):
+	article = Article.objects.get(slug=slug)
+	if request.method == 'POST':
+		article.clap_num += 1
+		article.save()
+	return render(request,'articles/article_detail.html',{'article':article})
+```

@@ -4,8 +4,8 @@ html, body {
   background: #673137;
 }
 *{
-  position: relative;
   font-family: 'Lora','Noto Sans', sans-serif;
+  display: block;
 }
 
 /* header */
@@ -20,4 +20,9 @@ a,a:visited{
 
 a:hover{
 	color: #5a6372;
+}
+
+.menu-item{
+	float: left;
+	margin: 10px;
 }
